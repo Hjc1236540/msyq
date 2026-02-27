@@ -1,0 +1,848 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.music-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.music-info {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 10px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-player-mobile {
+    display: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #00bcd4;
+}
+
+/* 英雄区域 */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 150px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="0,100 100,0 100,100"/></svg>');
+    background-size: cover;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #00bcd4;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,188,212,0.3);
+}
+
+.btn:hover {
+    background-color: #0097a7;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,188,212,0.4);
+}
+
+/* 简介区域 */
+.intro {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.intro h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: #666;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.skill-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.skill-item p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 关于我页面 */
+.about {
+    padding: 150px 0 100px;
+    background-color: #f5f5f5;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 作品集页面 */
+.portfolio {
+    padding: 150px 0 100px;
+    background-color: #fff;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: #fff;
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-info {
+    transform: translateY(0);
+}
+
+.portfolio-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* 联系方式页面 */
+.contact {
+    padding: 150px 0 100px;
+    background-color: #f5f5f5;
+}
+
+.contact h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00bcd4;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-item i {
+    font-size: 24px;
+    color: #00bcd4;
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+/* 页脚 */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .music-player {
+        display: none;
+    }
+    
+    .music-player-mobile {
+        display: flex;
+        position: fixed;
+        left: 20px;
+        bottom: 50%;
+        transform: translateY(50%);
+        z-index: 1000;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .music-btn-mobile {
+        background: #333;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .music-btn-mobile:hover {
+        background-color: #00bcd4;
+        transform: scale(1.1);
+    }
+    
+    .music-player-mobile-expanded {
+        display: none;
+        position: fixed;
+        left: 80px;
+        bottom: 50%;
+        transform: translateY(50%);
+        z-index: 1001;
+        background: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .music-player-mobile-expanded.show {
+        display: flex;
+    }
+    
+    .music-player-mobile-expanded .music-buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .music-player-mobile-expanded .music-info {
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .intro h2,
+    .about h2,
+    .portfolio h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 工作经历区域 */
+.work-experience {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.work-experience h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.experience-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+}
+
+.experience-company h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-date {
+    color: #00bcd4;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.experience-toggle {
+    font-size: 20px;
+    color: #00bcd4;
+    transition: transform 0.3s ease;
+}
+
+.experience-details {
+    display: none;
+    padding: 0 30px 25px 30px;
+    border-top: 1px solid #eee;
+}
+
+.experience-details p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.experience-details ul {
+    margin-left: 20px;
+    color: #666;
+}
+
+.experience-details li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* 侧边微信图标 */
+.wechat-sidebar {
+    position: fixed;
+    right: 20px;
+    bottom: 50%;
+    transform: translateY(50%);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.wechat-icon {
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.wechat-icon:hover {
+    background-color: #07c160;
+    transform: scale(1.1);
+}
+
+.wechat-icon:hover svg {
+    stroke: #fff;
+}
+
+.wechat-qrcode {
+    position: absolute;
+    right: 80px;
+    bottom: 50%;
+    transform: translateY(50%);
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: none;
+    min-width: 200px;
+}
+
+.wechat-qrcode::before {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 10px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.wechat-qrcode p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+/* 网文作品页面 */
+.novel {
+    padding: 150px 0 100px;
+    background-color: #f5f5f5;
+}
+
+.novel h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
+}
+
+.novel-section {
+    margin-bottom: 60px;
+}
+
+.novel-section h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.novel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.novel-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.novel-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.novel-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.novel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.novel-item:hover .novel-image img {
+    transform: scale(1.1);
+}
+
+.novel-info {
+    padding: 25px;
+}
+
+.novel-info h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.novel-platform {
+    color: #00bcd4;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.novel-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 小说内容展示区域 */
+.novel-content {
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.novel-content h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.chapter-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chapter-card h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.chapter-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    text-indent: 2em;
+}
+
+/* 响应式设计 - 网文作品 */
+@media (max-width: 768px) {
+    .novel-content {
+        padding: 20px;
+    }
+    
+    .novel-content h3 {
+        font-size: 24px;
+    }
+    
+    .chapter-card h4 {
+        font-size: 20px;
+    }
+    
+    .chapter-card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .novel-content {
+        padding: 15px;
+    }
+    
+    .novel-content h3 {
+        font-size: 22px;
+    }
+    
+    .chapter-card h4 {
+        font-size: 18px;
+    }
+    
+    .chapter-card p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 个人展示网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">马上有钱</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="portfolio.html" class="active">作品集</a></li>
+                <li><a href="novel.html">网文作品</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+            <div class="music-player">
+                <button class="music-btn" onclick="toggleMusic()">
+                    <svg id="play-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <svg id="pause-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                </button>
+                <button class="music-btn" onclick="prevSong()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                        <line x1="5" y1="19" x2="5" y2="5"></line>
+                    </svg>
+                </button>
+                <button class="music-btn" onclick="nextSong()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                        <line x1="19" y1="5" x2="19" y2="19"></line>
+                    </svg>
+                </button>
+                <div class="music-info">
+                    <span id="current-song">正在播放：示例音乐</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集区域 -->
+    <section class="portfolio">
+        <div class="container">
+            <h2>我的作品集</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="http://photogzmaz.photo.store.qq.com/psc?/V53llrxN147av40fNqj04BJK9Y3BYDRh/TmEUgtj9EK6.7V8ajmQrEKWbs3IgSTjRq6xm*I45pS9c8FFMwTpaUq*UPpyey5f93iHmLnTqsRozMRzsgqaQOUyuO5TmVP9oGSc8mUmaflc!/b&bo=oAVmBaAFZgUBFzA!&rf=viewer_4" alt="项目1">
+                    <div class="portfolio-info">
+                        <h3>企业网站设计</h3>
+                        <p>为科技公司设计的现代响应式网站，注重用户体验和品牌一致性。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="http://p5.itc.cn/q_70/images03/20200911/9e726eeab2e74a05824f8aed9b977419.png" alt="项目2">
+                    <div class="portfolio-info">
+                        <h3>移动应用界面</h3>
+                        <p>健康追踪应用的用户界面设计，简洁直观，易于使用。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="http://5b0988e595225.cdn.sohucs.com/images/20180831/f011a4aff7304de9ba3717037e45c4a6.jpeg" alt="项目3">
+                    <div class="portfolio-info">
+                        <h3>品牌识别设计</h3>
+                        <p>为初创公司创建的完整品牌识别系统，包括标志、色彩方案和品牌指南。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i01piccdn.sogoucdn.com/41456de918285d2c" alt="项目4">
+                    <div class="portfolio-info">
+                        <h3>电子商务网站</h3>
+                        <p>时尚品牌的电子商务网站设计，注重产品展示和购物体验。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="http://bpic.588ku.com/element_origin_min_pic/18/06/09/25f13ef6eadbc81238c790d240e87b54.jpg" alt="项目5">
+                    <div class="portfolio-info">
+                        <h3>数据仪表盘设计</h3>
+                        <p>为企业客户设计的数据分析仪表盘，清晰展示关键业务指标。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://img95.699pic.com/desgin_photo/40157/9240_list.jpg" alt="项目6">
+                    <div class="portfolio-info">
+                        <h3>印刷品设计</h3>
+                        <p>活动宣传册和海报设计，结合现代排版和视觉元素。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 胡俊超. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- 侧边微信图标 -->
+    <div class="wechat-sidebar" onclick="toggleWechat()">
+        <div class="wechat-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#07c160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.04 19.46a8.5 8.5 0 0 1-11.01-12.97 8.5 8.5 0 1 1 11.01 12.97z"></path>
+                <circle cx="8" cy="12" r="1"></circle>
+                <circle cx="12" cy="12" r="1"></circle>
+                <path d="M16 16c-2 0-3.5-1.5-3.5-3.5"></path>
+            </svg>
+        </div>
+        <div class="wechat-qrcode" id="wechat-qrcode">
+            <p>微信号：qcgz_hjc0821</p>
+        </div>
+    </div>
+
+    <div class="music-player-mobile" id="music-player-mobile">
+        <button class="music-btn-mobile" onclick="toggleMusic()">
+            <svg id="play-icon-mobile" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg id="pause-icon-mobile" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+        </button>
+        <button class="music-btn-mobile" onclick="prevSong()">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                <line x1="5" y1="19" x2="5" y2="5"></line>
+            </svg>
+        </button>
+        <button class="music-btn-mobile" onclick="nextSong()">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                <line x1="19" y1="5" x2="19" y2="19"></line>
+            </svg>
+        </button>
+    </div>
+
+    <audio id="audio-player" preload="auto"></audio>
+
+    <script src="music.js"></script>
+    <script>
+        function toggleWechat() {
+            const qrcode = document.getElementById('wechat-qrcode');
+            if (qrcode.style.display === 'block') {
+                qrcode.style.display = 'none';
+            } else {
+                qrcode.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
