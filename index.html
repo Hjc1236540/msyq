@@ -141,7 +141,7 @@
             videoModal.id = 'video-modal';
             videoModal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:10000;display:flex;flex-direction:column;justify-content:center;align-items:center;';
             
-            videoModal.innerHTML = '<div style="position:absolute;top:20px;right:20px;color:#fff;font-size:36px;cursor:pointer;z-index:10002;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);" onclick="closeVideo()">✕</div><div style="width:90%;max-width:1000px;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,0.5);"><video id="main-video" controls style="width:100%;height:100%;object-fit:contain;"><source src="https://photovideo.photo.qq.com/1075_0b53tsmw7jia7qamkonczjuthhaen7waau2a.f0.mp4?dis_k=8cfe710edf2c103288e4d100d213add1&amp;dis_t=1772268138&amp;vuin=2778283120&amp;owner=Mjc3ODI4MzEyMA==" type="video/mp4">您的浏览器不支持视频播放</video></div><p style="color:#fff;margin-top:20px;font-size:16px;">点击 LOGO 观看视频</p>';
+            videoModal.innerHTML = '<div style="position:absolute;top:20px;right:20px;color:#fff;font-size:36px;cursor:pointer;z-index:10002;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);" onclick="closeVideo()">✕</div><div style="width:90%;max-width:1000px;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,0.5);"><video id="main-video" controls style="width:100%;height:100%;object-fit:contain;"><source src="./videos/newyear-2026.mp4">您的浏览器不支持视频播放</video></div><p style="color:#fff;margin-top:20px;font-size:16px;">祝您马年大吉，岁岁平安。</p>';
             
             document.body.appendChild(videoModal);
             document.body.style.overflow = 'hidden';
@@ -167,3 +167,4 @@
     </script>
 </body>
 </html>
+
