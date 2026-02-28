@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系方式 - 个人展示网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="javascript:void(0)" class="logo" onclick="openVideo()">
+                马上有钱
+                <span class="logo-tooltip">点击我 可以看视频 收货祝福哦~</span>
+                <div class="logo-mobile-hint">点我 能收货祝福哦~</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="portfolio.html">作品集</a></li>
+                <li><a href="novel.html">网文作品</a></li>
+                <li><a href="contact.html" class="active">联系方式</a></li>
+            </ul>
+            <div class="music-player">
+                <button class="music-btn" onclick="toggleMusic()">
+                    <svg id="play-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <svg id="pause-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                </button>
+                <button class="music-btn" onclick="prevSong()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                        <line x1="5" y1="19" x2="5" y2="5"></line>
+                    </svg>
+                </button>
+                <button class="music-btn" onclick="nextSong()">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                        <line x1="19" y1="5" x2="19" y2="19"></line>
+                    </svg>
+                </button>
+                <div class="music-info">
+                    <span id="current-song">正在播放：示例音乐</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>邮箱</h3>
+                            <p>chaojunhu521@163.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h3>微信</h3>
+                            <p>qcgz_hjc0821</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h3>电话</h3>
+                            <p>13082594905</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>发送消息</h3>
+                    <form id="contact-form">
+                        <input type="text" id="name" placeholder="您的姓名" required>
+                        <input type="email" id="email" placeholder="您的邮箱" required>
+                        <textarea id="message" placeholder="您的留言" rows="5" required></textarea>
+                        <button type="submit" class="btn">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 胡俊超. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <div class="wechat-sidebar" onclick="toggleWechat()">
+        <div class="wechat-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#07c160" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.04 19.46a8.5 8.5 0 0 1-11.01-12.97 8.5 8.5 0 1 1 11.01 12.97z"></path>
+                <circle cx="8" cy="12" r="1"></circle>
+                <circle cx="12" cy="12" r="1"></circle>
+                <path d="M16 16c-2 0-3.5-1.5-3.5-3.5"></path>
+            </svg>
+        </div>
+        <div class="wechat-qrcode" id="wechat-qrcode">
+            <p>微信号：qcgz_hjc0821</p>
+        </div>
+    </div>
+
+    <div class="music-player-mobile" id="music-player-mobile">
+        <button class="music-btn-mobile" onclick="toggleMusic()">
+            <svg id="play-icon-mobile" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg id="pause-icon-mobile" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+        </button>
+        <button class="music-btn-mobile" onclick="prevSong()">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                <line x1="5" y1="19" x2="5" y2="5"></line>
+            </svg>
+        </button>
+        <button class="music-btn-mobile" onclick="nextSong()">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                <line x1="19" y1="5" x2="19" y2="19"></line>
+            </svg>
+        </button>
+    </div>
+
+    <audio id="audio-player" preload="auto"></audio>
+
+    <script src="music.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('v41YBHziPjDDBYRHW');
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const btn = e.target.querySelector('.btn');
+            const originalText = btn.textContent;
+            
+            btn.textContent = '发送中...';
+            btn.disabled = true;
+            
+            const templateParams = {
+                name: name,
+                email: email,
+                message: message
+            };
+            
+            emailjs.send('service_mpc1lrs', 'template_ztday3l', templateParams)
+                .then(function() {
+                    alert('邮件发送成功！感谢您的留言！');
+                    document.getElementById('contact-form').reset();
+                })
+                .catch(function(error) {
+                    console.log('EmailJS发送失败，使用备用方案:', error);
+                    const subject = encodeURIComponent('来自网站的留言 - ' + name);
+                    const body = encodeURIComponent('姓名: ' + name + '\n邮箱: ' + email + '\n\n留言内容:\n' + message);
+                    window.location.href = 'mailto:chaojunhu521@163.com?subject=' + subject + '&body=' + body;
+                })
+                .finally(function() {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                });
+        });
+        
+        function toggleWechat() {
+            const qrcode = document.getElementById('wechat-qrcode');
+            if (qrcode.style.display === 'block') {
+                qrcode.style.display = 'none';
+            } else {
+                qrcode.style.display = 'block';
+            }
+        }
+        
+        function openVideo() {
+            const videoModal = document.createElement('div');
+            videoModal.id = 'video-modal';
+            videoModal.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:10000;display:flex;flex-direction:column;justify-content:center;align-items:center;';
+            
+            videoModal.innerHTML = '<div style="position:absolute;top:20px;right:20px;color:#fff;font-size:36px;cursor:pointer;z-index:10002;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,0.1);" onclick="closeVideo()">✕</div><div style="width:90%;max-width:1000px;aspect-ratio:16/9;background:#000;border-radius:8px;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,0.5);"><video id="main-video" controls style="width:100%;height:100%;object-fit:contain;"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">您的浏览器不支持视频播放</video></div><p style="color:#fff;margin-top:20px;font-size:16px;">点击 LOGO 观看视频</p>';
+            
+            document.body.appendChild(videoModal);
+            document.body.style.overflow = 'hidden';
+            
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    closeVideo();
+                }
+            });
+        }
+        
+        function closeVideo() {
+            const modal = document.getElementById('video-modal');
+            if (modal) {
+                const video = modal.querySelector('video');
+                if (video) {
+                    video.pause();
+                }
+                modal.remove();
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+</body>
+</html>
